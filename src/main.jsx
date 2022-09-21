@@ -1,0 +1,20 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { Provider } from 'react-redux'
+import App from './App'
+import './index.css'
+import { store } from './store'
+import { PokemonApp } from './PokemonApp'
+import { TodoApp } from './TodoApp'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Provider store={ store }>
+      {/* <App /> */}
+      <PokemonApp/>
+      <TodoApp/>
+    </Provider>
+  </React.StrictMode>
+)
+// Configurar store y slices https://www.udemy.com/course/react-cero-experto/learn/lecture/32219342#questions
+// pokemonSlice https://www.udemy.com/course/react-cero-experto/learn/lecture/32219820#questions/18075510
